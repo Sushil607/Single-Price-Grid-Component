@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+}
+
+.heading {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: hsl(179, 62%, 43%);
+}
+
+.sub-heading {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.text {
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.xs-text {
+  font-size: 0.7rem;
+}
+
+body {
+  background-color: hsl(204, 43%, 93%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  margin-top: 100px;
+  /* border: 2px solid red; */
+  border-radius: 10px;
+  width: 560px;
+  height: 380px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 4fr 5fr;
+  grid-template-areas:
+    "sectionA sectionA"
+    "sectionB sectionC";
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+section {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section-A {
+  border-radius: 8px 8px 0px 0px;
+  background-color: #ffffff;
+  grid-area: sectionA;
+}
+
+.section-A .sub-heading {
+  color: hsl(71, 73%, 54%);
+}
+
+.section-A .text {
+  color: hsl(218, 22%, 67%);
+}
+
+.section-B {
+  border-radius: 0px 0px 0px 8px;
+  background-color: hsl(179, 62%, 43%);
+  grid-area: sectionB;
+}
+
+.section-B .text {
+  color: #ffffff;
+}
+
+.section-C {
+  border-radius: 0px 0px 8px 0px;
+  background-color: hsl(179, 39%, 60%);
+  grid-area: sectionC;
+}
+
+.section-C .xs-text {
+  margin-top: 5px;
+  color: hsl(204, 43%, 93%);
+}
+
+.sign-up {
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 4px;
+  padding: 0.7rem;
+  border: none;
+  background: hsl(71, 73%, 54%);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.4s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.sign-up:hover {
+  opacity: 0.9;
+  transition-timing-function: ease-out;
+}
+
+@media screen and (max-width: 398px) {
+  * {
+    font-size: 15px;
+  }
+
+  .text {
+    margin-top: 10px;
+    line-height: 1.4rem;
+  }
+
+  .card {
+    margin: 30px auto;
+    width: 80%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "sectionA "
+      "sectionB "
+      "sectionC";
+  }
+
+  .section-B {
+    border-radius: 0px 0px 0px 0px;
+  }
+
+  .section-C {
+    border-radius: 0px 0px 8px 8px;
+  }
+}
